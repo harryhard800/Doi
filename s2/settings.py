@@ -26,7 +26,7 @@ SECRET_KEY = 'django-insecure-azafbvfa6r#qpo&$@gj8u@#+@xckh084sn@eizsm#kz$0#n5f&
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = False
 
-ALLOWED_HOSTS = ['127.0.0.1','doisearch.herokuapp.com']
+ALLOWED_HOSTS = ['doisearch.herokuapp.com','localhost']
 
 
 # Application definition
@@ -79,10 +79,9 @@ WSGI_APPLICATION = 's2.wsgi.application'
 DATABASES = {
     'default': {
         'ENGINE':'django.db.backends.postgresql',
-        'NAME': 'postgres',
+        'NAME': 'testdb',
         'USER': 'postgres',
         'HOST': 'localhost',
-        'PORT' : '5432',
         'PASSWORD' :'70499669@Vk'
     }
 }
@@ -125,6 +124,7 @@ USE_TZ = True
 # https://docs.djangoproject.com/en/3.2/howto/static-files/
 
 STATIC_URL = '/static/'
+STATIC_ROOT = BASE_DIR / 'static'
 
 # Default primary key field type
 # https://docs.djangoproject.com/en/3.2/ref/settings/#default-auto-field
